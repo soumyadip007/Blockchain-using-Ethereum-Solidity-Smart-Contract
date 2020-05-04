@@ -1,14 +1,15 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.6.4;
 
 contract MyContract{
-    string value;
-    
-    function get() public view returns(string){
-        return value;
+   
+     uint storedData;
+
+    function set(uint x) public {
+        storedData = x;
     }
-    
-    function set(string _value) public{
-        value = _value;
+
+    function get() public view returns (uint) {
+        return storedData;
     }
     
 }
