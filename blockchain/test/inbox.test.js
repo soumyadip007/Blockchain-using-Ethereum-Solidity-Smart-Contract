@@ -18,7 +18,7 @@ beforeEach(async () => {
       data: bytecode,
       arguments: ['Hi there!']
     })
-    .send({ from: accounts[0], gas: '1000000' });
+    .send({ from: accounts[0] });
 });
 
 
@@ -26,7 +26,7 @@ describe('Inbox',()=>{
 	
 	  it('console a contract',async () => {
   			console.log(inbox);
-  });
+ 	  });
 
 
 	  it('deploys a contract', () => {
@@ -42,10 +42,11 @@ describe('Inbox',()=>{
 	  it('can change the method',async () => {
 	  		
 	  		await inbox.methods.setMessage('Bye, Setter()')
-	  								.send({from: accounts[0]});
+	  								.send({from: accounts[0], gas:'1000000'});
 	  		
 	  		const message=await inbox.methods.message().call();
 	  		console.log('Just Retrived '+message);
+	  		console.log(inbox.options.address);
 	  });
 
 });
