@@ -15,10 +15,24 @@ class Car{
 }
 
 
+beforeEach (()=>{
+
+	consol.log('Before each');
+	const car=new Car();
+
+});
+
+
 describe('Car',()=>{
 	
 	it('can park',()=>{
-		const car=new Car();
+		//const car=new Car();
+		assert.equal(car.park(),'stopped');
+	});
+
+
+	it('can park',()=>{
+		//const car=new Car();
 		assert.equal(car.park(),'stopped');
 	});
 
