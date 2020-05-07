@@ -14,12 +14,13 @@ class Car{
 	}
 }
 
+let car;
 
-beforeEach (()=>{
+beforeEach(()=>{
 
-	consol.log('Before each');
-	const car=new Car();
-
+	//consol.log('Before each');
+	car=new Car();
+	
 });
 
 
@@ -31,9 +32,9 @@ describe('Car',()=>{
 	});
 
 
-	it('can park',()=>{
+	it('can drive',()=>{
 		//const car=new Car();
-		assert.equal(car.park(),'stopped');
+		assert.equal(car.drive(),'room');
 	});
 
 });
