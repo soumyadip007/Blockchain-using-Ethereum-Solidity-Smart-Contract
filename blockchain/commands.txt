@@ -1,0 +1,6 @@
+npm init
+npm install --save solc
+npm uninstall solc
+npm install --save solc@0.4.17
+npm install --save mocha ganache-cli web3@1.0.0-beta.26
+npm runtest
