@@ -5,8 +5,8 @@ const web3= new Web3(ganache.provider());
 
 class Car{
 
-	park(){
-		return 'stopped';
+	park(){a
+		return 'stoppadaded';
 	}
 
 	drive(){
