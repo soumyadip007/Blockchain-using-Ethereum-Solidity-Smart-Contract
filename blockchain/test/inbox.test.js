@@ -24,9 +24,29 @@ beforeEach(async () => {
 
 describe('Inbox',()=>{
 	
-	  it('deploys a contract', () => {
-  console.log(inbox);
+	  it('console a contract',async () => {
+  			console.log(inbox);
   });
+
+
+	  it('deploys a contract', () => {
+	  			console.log(inbox.options.address);
+	  			assert.ok(inbox.options.address);
+	  });
+
+	 it('has a default method',async () => {
+	  		const message=await inbox.methods.message().call();
+	  		console.log('Defaulr '+message);
+	  });
+
+	  it('can change the method',async () => {
+	  		
+	  		await inbox.methods.setMessage('Bye, Setter()')
+	  								.send({from: accounts[0]});
+	  		
+	  		const message=await inbox.methods.message().call();
+	  		console.log('Just Retrived '+message);
+	  });
 
 });
 
