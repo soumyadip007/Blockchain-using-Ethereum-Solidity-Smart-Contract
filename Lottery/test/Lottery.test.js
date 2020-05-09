@@ -86,10 +86,11 @@ describe('Lottery Contract',()=>{
 	  			value: 0
 	  		});
  			assert(false)
+ 			console('Catch');
  		}
  		catch(err){
  			assert(err);
- 			console(err);
+ 			console('Catch');
  		}
  	 });
 
