@@ -40,7 +40,7 @@ describe('Lottery Contract',()=>{
 	  		});
 
 	  		assert.equal(accounts[0],players[0]);
-	  	//	assert.equal(1,players.length);
+	  		assert.equal(1,players.length);
 	  		
 
 	  });
@@ -69,7 +69,9 @@ describe('Lottery Contract',()=>{
 	  		});
 
 	  		assert.equal(accounts[0],players[0]);
-	  	//	assert.equal(1,players.length);
+	  		assert.equal(accounts[1],players[1]);
+	  		assert.equal(accounts[2],players[2]);
+	  		assert.equal(3,players.length);
 	  		
 
 	  });
